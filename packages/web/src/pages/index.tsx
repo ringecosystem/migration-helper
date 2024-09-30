@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 		setMigrationMsg(`Migration in progress; this may take between 6 to 300 seconds. Please check back later.`);
 
 		try {
-			const response = await fetch('http://localhost:3001/api/migrate', {
+			const response = await fetch('https://migration-helper.darwinia.network/api/migrate', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
