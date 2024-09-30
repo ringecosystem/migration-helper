@@ -43,6 +43,6 @@ jobs:
         with:
           push: true
           context: packages/delegator
-          file: Dockerfile
+          file: packages/delegator/Dockerfile
           tags: |
             ${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/delegator:${{ env.GIT_TAG_NAME }}
