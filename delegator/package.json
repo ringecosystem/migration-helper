@@ -1,0 +1,23 @@
+{
+	"name": "delegator",
+	"version": "0.1.0",
+	"main": "delegator.ts",
+	"author": {
+		"name": "Xavier Lau",
+		"email": "x@acg.box"
+	},
+	"license": "GPL-3.0-only",
+	"scripts": {
+		"start": "ts-node delegator.ts"
+	},
+	"dependencies": {
+		"@polkadot/api": "^13.2.1",
+		"@types/express": "^5.0.0",
+		"cors": "^2.8.5",
+		"express": "^5.0.0"
+	},
+	"devDependencies": {
+		"ts-node": "^10.9.2",
+		"typescript": "^5.6.2"
+	}
+}

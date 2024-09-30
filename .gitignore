@@ -1,0 +1,18 @@
+# System
+.DS_Store
+
+# Integrated development environment
+.idea
+.vscode
+
+# Package manager
+## Cargo
+target
+# Nix
+shell.nix
+## NPM
+.next
+node_modules
+
+# Test data
+tmp
