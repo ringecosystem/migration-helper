@@ -16,8 +16,3 @@ node_modules
 
 # Test data
 tmp
-
-out
-build
-dist
-tsconfig.tsbuildinfo
