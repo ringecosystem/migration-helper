@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          context: .
+          context: packages/delegator
           file: packages/delegator/Dockerfile
           tags: |
             ${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/delegator:sha-${{ env.SHA }}
