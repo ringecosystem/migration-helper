@@ -32,8 +32,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          context: packages/delegator
-          file: Dockerfile
+          context: .
+          file: packages/delegator/Dockerfile
           tags: |
             ${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/delegator:sha-${{ env.SHA }}
 
