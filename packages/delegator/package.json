@@ -1,6 +1,6 @@
 {
 	"name": "delegator",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "delegator.ts",
 	"author": {
 		"name": "Xavier Lau",
@@ -12,13 +12,13 @@
 		"build": "tsc -b"
 	},
 	"dependencies": {
-		"@polkadot/api": "^13.2.1",
-		"@types/express": "^5.0.0",
-		"cors": "^2.8.5",
-		"express": "^5.0.0"
+		"@polkadot/api": "^14",
+		"@types/express": "^5.0",
+		"cors": "^2.8",
+		"express": "^5.0"
 	},
 	"devDependencies": {
-		"ts-node": "^10.9.2",
-		"typescript": "^5.6.2"
+		"ts-node": "^10.9",
+		"typescript": "^5.6"
 	}
 }
