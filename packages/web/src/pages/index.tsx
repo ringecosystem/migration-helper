@@ -116,6 +116,8 @@ const Home: NextPage = () => {
 		setMigrationMsg(`Migration in progress; this may take between 6 to 300 seconds. Please check back later.`);
 
 		try {
+			// Dev.
+			// const response = await fetch('http://localhost:3001/api/migrate', {
 			const response = await fetch('https://migration-helper.darwinia.network/api/migrate', {
 				method: 'POST',
 				headers: {
@@ -175,7 +177,7 @@ const Home: NextPage = () => {
 										</button>
 										{unstakeHash && (
 											<div className={styles.result}>
-												Transaction Hash: <a className={styles.link} href={`${chain?.blockExplorers?.default?.url}/tx/${unstakeHash}`} target="_blank" rel="noopener noreferrer">{unstakeHash}</a> ({isUnstakePending ? 'Pending' : confirming ? 'Confirming' : 'Unknown'})
+												Transaction Hash: <a className={styles.link} href={`${chain?.blockExplorers?.default?.url}/tx/${unstakeHash}`} target="_blank" rel="noopener noreferrer">{unstakeHash}</a> ({isUnstakePending ? 'pending' : confirming ? 'confirming' : 'unknown'})
 											</div>
 										)}
 										{unstakeErr && (

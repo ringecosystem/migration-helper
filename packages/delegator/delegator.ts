@@ -42,6 +42,8 @@ async function migrate(chainId: number, who: string) {
 							if (typeof unsub === 'function') {
 								unsub();
 							}
+
+							resolve(undefined);
 						}
 					}).catch(reject);
 				});
