@@ -64,6 +64,7 @@ const koi: Chain = {
 export const config = getDefaultConfig({
 	appName: 'Darwinia Migration Helper',
 	projectId: '2f094d8039dafb4f3fd537931f739604',
-	chains: [darwinia, crab, koi],
+	chains: [crab, koi],
+	// chains: [darwinia, crab, koi],
 	ssr: true,
 });

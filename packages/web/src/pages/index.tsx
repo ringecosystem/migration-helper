@@ -29,6 +29,11 @@ const Home: NextPage = () => {
 	const [migrating, setMigrating] = useState<boolean>(false);
 	const [migrationMsg, setMigrationMsg] = useState<string>('');
 	const [migrationErr, setMigrationErr] = useState<string | null>(null);
+	const token: { [key: number]: string } = {
+		46: 'RING',
+		44: 'CRAB',
+		701: 'KRING',
+	};
 
 	useEffect(() => {
 		const fetch = async () => {
@@ -139,7 +144,7 @@ const Home: NextPage = () => {
 					content="Darwinia Migration Helper"
 					name="Darwinia Migration Helper"
 				/>
-				<link href="/favicon.ico" rel="icon" />
+				<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 			</Head>
 
 			<main className={styles.main}>
@@ -159,7 +164,7 @@ const Home: NextPage = () => {
 							<>
 								{ring !== 0n || deposits.some(deposit => deposit.inUse) ? (
 									<>
-										There are "{formatValue(ring)}" RING(s) and "{deposits.filter(deposit => deposit.inUse).length}" deposit(s) in staking; you need to unstake them first.
+										There are "{formatValue(ring)}" {chain?.id ? token[chain.id] : 'token'}(s) and "{deposits.filter(deposit => deposit.inUse).length}" deposit(s) in staking; you need to unstake them first.
 
 										<button
 											className={styles.actButton}
