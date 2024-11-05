@@ -56,6 +56,9 @@ async function migrate(chainId: number, who: string) {
 
 app.use(express.json());
 app.use(cors());
+app.get('/api', async (req, res) => {
+	res.status(200).send('ok');
+});
 app.post('/api/migrate', async (req, res) => {
 	const x = req.headers['x-dmh'];
 
